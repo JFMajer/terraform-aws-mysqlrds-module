@@ -15,7 +15,7 @@ resource "aws_db_instance" "rds_mysql" {
     skip_final_snapshot = true
     db_name = var.replicate_source_db == null ? var.db_name : null
     apply_immediately = true
-    db_subnet_group_name = aws_db_subnet_group.rds_mysql.name
+    db_subnet_group_name = var.subnet_group_name
 
     backup_retention_period = var.backup_retention_period
 
@@ -34,7 +34,3 @@ resource "random_string" "random" {
     upper = false
 }
 
-resource "aws_db_subnet_group" "rds_mysql" {
-    name = "rds-mysql-${var.cluster_name}-subnetgroup"
-    subnet_ids = var.subnet_ids
-}

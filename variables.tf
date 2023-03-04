@@ -28,9 +28,9 @@ variable "cluster_name" {
     type        = string
 }
 
-variable "subnet_ids" {
-    description = "Subnet IDs to use for the RDS instance"
-    type = list(string)
+variable "subnet_group_name" {
+    description = "Name of the subnet group to use for the RDS instance"
+    type        = string
 }
 
 variable "deploy_rds" {
