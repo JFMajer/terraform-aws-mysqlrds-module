@@ -50,3 +50,13 @@ variable "replicate_source_db" {
     type = string
     default = null
 }
+
+variable "security_group_id" {
+    description = "Security group to allow traffic from"
+    type = string
+}
+
+variable "vpc_id" {
+    description = "The VPC ID to deploy the RDS instance into"
+    type = string
+}
