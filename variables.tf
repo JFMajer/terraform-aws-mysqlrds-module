@@ -52,11 +52,6 @@ variable "replicate_source_db" {
 }
 
 variable "security_group_id" {
-    description = "Security group to allow traffic from"
-    type = string
-}
-
-variable "vpc_id" {
-    description = "The VPC ID to deploy the RDS instance into"
+    description = "Security group to attach to the RDS instance"
     type = string
 }
