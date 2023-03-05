@@ -8,7 +8,7 @@ terraform {
 }
 
 resource "aws_db_instance" "rds_mysql" {
-    identifier = "rds-mysql-${var.cluster_name}-${random_string.random.result}"
+    identifier = "rds-mysql-${var.cluster_name}"
     allocated_storage = 20
     engine = var.replicate_source_db == null ? "mysql" : null
     instance_class = "db.t3.micro"
