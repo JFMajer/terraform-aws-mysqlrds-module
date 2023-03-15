@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+####################
+# RDS Instance     #
+####################
+
 resource "aws_db_instance" "rds_mysql" {
     identifier = "rds-mysql-${var.cluster_name}"
     allocated_storage = 20
